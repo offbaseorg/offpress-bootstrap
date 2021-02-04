@@ -1,0 +1,62 @@
+{
+  "bin": {
+    "url": "https://github.com/offbaseorg/offpress.git"
+  },
+  "lib": {
+    "theme": {
+      "url": "https://github.com/offbaseorg/offpress-theme-default.git"
+    },
+    "settings": {
+      "url": "https://github.com/offbaseorg/offpress-plugin-settings.git"
+    }
+  },
+  "trigger": {
+    "onpublish": [
+      "/plugin/theme/onpublish"
+    ],
+    "onsave": [
+      "/plugin/theme/onsave"
+    ]
+  },
+  "settings": {
+    "BASE": "",
+    "ROOT": "/home",
+    "SRC": "/home/src",
+    "DEST": "/home",
+    "NAME": "Offpress",
+    "THEME": "/lib/theme",
+    "CNAME": "",
+    "PAGE": {
+      "CHUNK": 6
+    },
+    "FEED": {
+      "CHUNK": 10
+    }
+  },
+  "customize": [{ 
+    "path": "settings.NAME",
+    "label": "Blog name"
+  }, {
+    "path": "settings.PAGE.CHUNK",
+    "label": "Items per page",
+    "type": "number"
+  }, {
+    "path": "settings.BASE",
+    "label": "Website base URL (Must end with /, for example: https://blog.offpress.app/)"
+  }, {
+    "path": "settings.CNAME",
+    "label": "Custom domain (ex: blog.offbase.org)"
+  }, {
+    "path": "settings.FEED.CHUNK",
+    "label": "Number of posts in the RSS feed"
+  }, {
+    "path": "lib.theme.url",
+    "label": "theme component git URL (/lib/theme)"
+  }, {
+    "path": "bin.url",
+    "label": "bin component git URL (/bin)"
+  }, {
+    "path": "lib.settings.url",
+    "label": "settings component git url (/lib/theme)"
+  }]
+}
